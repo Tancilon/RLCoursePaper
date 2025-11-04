@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.4.13)  1 NOV 2025 18:21
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.4.13)  4 NOV 2025 13:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -634,8 +634,7 @@ File: l3backend-xetex.def 2024-05-08 L3 backend support: XeTeX
 \l__pdf_internal_box=\box74
 \g__pdf_backend_annotation_int=\count344
 \g__pdf_backend_link_int=\count345
-)
-No file example_paper.aux.
+) (build/example_paper.aux)
 \openout1 = `example_paper.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 58.
@@ -670,7 +669,7 @@ Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of spacing.
 Package microtype Info: No adjustment of kerning.
-(d:/texlive/2025/texmf-dist/tex/latex/microtype/mt-ptm.cfg
+ (d:/texlive/2025/texmf-dist/tex/latex/microtype/mt-ptm.cfg
 File: mt-ptm.cfg 2006/04/20 v1.7 microtype config. file: Times (RS)
 )
 Package microtype Info: Loading generic protrusion settings for font family
@@ -678,12 +677,10 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 Package hyperref Info: Link coloring ON on input line 58.
+ (build/example_paper.out) (build/example_paper.out)
 \@outlinefile=\write4
 \openout4 = `example_paper.out'.
 
-
-
-Package hyperref Warning: Rerun to get /PageLabels entry.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
@@ -778,9 +775,6 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-LaTeX Warning: Reference `author info' on page 1 undefined on input line 327.
-
-
 Underfull \hbox (badness 1430) in paragraph at lines 331--336
 []\TU/pcr/m/n/10 Authors must provide their manuscripts in PDF
  []
@@ -798,9 +792,6 @@ Underfull \hbox (badness 8113) in paragraph at lines 331--336
 
 
 [2]
-
-
-LaTeX Warning: Reference `final author' on page 1 undefined on input line 369.
 
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: OT1).
@@ -855,18 +846,9 @@ Underfull \hbox (badness 1137) in paragraph at lines 539--539
 
 
 
-LaTeX Warning: Reference `icml-historical' on page 1 undefined on input line 559.
-
-
-LaTeX Warning: Reference `alg:example' on page 1 undefined on input line 570.
-
-
 Underfull \hbox (badness 2970) in paragraph at lines 567--571
 \TU/ptm/m/sc/10 and “algorithmic” environments to format pseu-
  []
-
-
-LaTeX Warning: Reference `sample-table' on page 1 undefined on input line 589.
 
 
 LaTeX Font Warning: Font shape `TU/ptm/m/sl' undefined
@@ -878,18 +860,6 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 [6]
-
-LaTeX Warning: Reference `def:inj' on page 1 undefined on input line 633.
-
-
-LaTeX Warning: Reference `lem:usefullemma' on page 1 undefined on input line 641.
-
-
-LaTeX Warning: Reference `thm:bigtheorem' on page 1 undefined on input line 650.
-
-
-LaTeX Warning: Reference `ass:xfinite' on page 1 undefined on input line 659.
-
 
 Package natbib Warning: Citation `Samuel59' on page 7 undefined on input line 672.
 
@@ -909,9 +879,6 @@ Package natbib Warning: Citation `mitchell80' on page 7 undefined on input line 
 Package natbib Warning: Citation `MachineLearningI' on page 7 undefined on input line 677.
 
 
-
-
-LaTeX Warning: Reference `author info' on page 1 undefined on input line 681.
 
 
 Package natbib Warning: Citation `Samuel59' on page 7 undefined on input line 686.
@@ -975,26 +942,14 @@ L3 programming layer <2025-01-18>
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `example_paper.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `example_paper.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
+Package rerunfilecheck Info: File `example_paper.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 25964 strings out of 473832
- 484877 string characters out of 5733158
+ 25972 strings out of 473832
+ 485075 string characters out of 5733158
  902015 words of memory out of 5000000
- 48602 multiletter control sequences out of 15000+600000
+ 48604 multiletter control sequences out of 15000+600000
  566631 words of font info for 74 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  99i,13n,101p,1006b,751s stack positions out of 10000i,1000n,20000p,200000b,200000s
