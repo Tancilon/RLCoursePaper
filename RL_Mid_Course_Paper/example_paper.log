@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.11.5)  5 NOV 2025 17:38
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.11.5)  6 NOV 2025 14:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -634,8 +634,7 @@ File: l3backend-xetex.def 2024-05-08 L3 backend support: XeTeX
 \l__pdf_internal_box=\box74
 \g__pdf_backend_annotation_int=\count344
 \g__pdf_backend_link_int=\count345
-)
-No file example_paper.aux.
+) (./example_paper.aux)
 \openout1 = `example_paper.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 57.
@@ -670,7 +669,7 @@ Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of spacing.
 Package microtype Info: No adjustment of kerning.
-(/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-ptm.cfg
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-ptm.cfg
 File: mt-ptm.cfg 2006/04/20 v1.7 microtype config. file: Times (RS)
 )
 Package microtype Info: Loading generic protrusion settings for font family
@@ -678,12 +677,10 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 Package hyperref Info: Link coloring ON on input line 57.
+ (./example_paper.out) (./example_paper.out)
 \@outlinefile=\write4
 \openout4 = `example_paper.out'.
 
-
-
-Package hyperref Warning: Rerun to get /PageLabels entry.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
@@ -733,11 +730,11 @@ Underfull \hbox (badness 1314) in paragraph at lines 107--107
 LaTeX Font Warning: Font shape `TU/ptm/m/it' undefined
 (Font)              using `TU/ptm/m/n' instead on input line 107.
 
-LaTeX Font Info:    Trying to load font information for TU+pcr on input line 122.
-LaTeX Font Info:    No file TUpcr.fd. on input line 122.
+LaTeX Font Info:    Trying to load font information for TU+pcr on input line 126.
+LaTeX Font Info:    No file TUpcr.fd. on input line 126.
 
 LaTeX Font Warning: Font shape `TU/pcr/b/n' undefined
-(Font)              using `TU/lmr/m/n' instead on input line 122.
+(Font)              using `TU/lmr/m/n' instead on input line 126.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-LatinModernRoman.cfg
 File: mt-LatinModernRoman.cfg 2021/02/21 v1.1 microtype config. file: Latin Modern Roman (RS)
@@ -745,24 +742,24 @@ File: mt-LatinModernRoman.cfg 2021/02/21 v1.1 microtype config. file: Latin Mode
 
 
 LaTeX Font Warning: Font shape `TU/pcr/m/n' undefined
-(Font)              using `TU/lmr/m/n' instead on input line 167.
+(Font)              using `TU/lmr/m/n' instead on input line 171.
 
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `pcr' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-Underfull \hbox (badness 10000) in paragraph at lines 204--208
+Underfull \hbox (badness 10000) in paragraph at lines 208--212
  \TU/pcr/m/n/10 Notes. Typical practical details: use RM-
  []
 
 
-Underfull \hbox (badness 4454) in paragraph at lines 204--208
+Underfull \hbox (badness 4454) in paragraph at lines 208--212
 \TU/pcr/m/n/10 SProp/Adam for optimization; clip rewards or
  []
 
 
-Underfull \hbox (badness 1173) in paragraph at lines 204--208
+Underfull \hbox (badness 1173) in paragraph at lines 208--212
 \TU/pcr/m/n/10 optionally use prioritized replay or Double DQN
  []
 
@@ -778,29 +775,23 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-LaTeX Warning: Reference `author info' on page 1 undefined on input line 326.
-
-
-Underfull \hbox (badness 1430) in paragraph at lines 330--335
+Underfull \hbox (badness 1430) in paragraph at lines 334--339
 []\TU/pcr/m/n/10 Authors must provide their manuscripts in PDF
  []
 
 
-Underfull \hbox (badness 4518) in paragraph at lines 330--335
+Underfull \hbox (badness 4518) in paragraph at lines 334--339
 \TU/pcr/m/n/10 contain only embedded Type-1 fonts (e.g., us-
  []
 
 
-Underfull \hbox (badness 8113) in paragraph at lines 330--335
+Underfull \hbox (badness 8113) in paragraph at lines 334--339
 \TU/pcr/m/n/10 ing the program pdffonts in linux or using
  []
 
 
 
 [2]
-
-
-LaTeX Warning: Reference `final author' on page 1 undefined on input line 368.
 
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: OT1).
@@ -821,13 +812,13 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [4]
 
 LaTeX Font Warning: Font shape `TU/ptm/m/sc' undefined
-(Font)              using `TU/ptm/m/n' instead on input line 435.
+(Font)              using `TU/ptm/m/n' instead on input line 439.
 
 
-Package natbib Warning: Citation `langley00' on page 5 undefined on input line 439.
+Package natbib Warning: Citation `langley00' on page 5 undefined on input line 443.
 
 
-Package natbib Warning: Citation `anonymous' on page 5 undefined on input line 444.
+Package natbib Warning: Citation `anonymous' on page 5 undefined on input line 448.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -845,32 +836,23 @@ File: icml_numpapers.pdf Graphic file (type pdf)
 
 
 LaTeX Font Warning: Font shape `TU/ptm/m/sl' undefined
-(Font)              using `TU/ptm/m/it' instead on input line 538.
+(Font)              using `TU/ptm/m/it' instead on input line 542.
 
 
-Underfull \hbox (badness 1137) in paragraph at lines 538--538
+Underfull \hbox (badness 1137) in paragraph at lines 542--542
 [][][]\TU/ptm/m/it/9 Historical locations and number of accepted
  []
 
 
 
 
-LaTeX Warning: Reference `icml-historical' on page 1 undefined on input line 558.
-
-
-LaTeX Warning: Reference `alg:example' on page 1 undefined on input line 569.
-
-
-Underfull \hbox (badness 2970) in paragraph at lines 566--570
+Underfull \hbox (badness 2970) in paragraph at lines 570--574
 \TU/ptm/m/sc/10 and “algorithmic” environments to format pseu-
  []
 
 
-LaTeX Warning: Reference `sample-table' on page 1 undefined on input line 588.
-
-
 LaTeX Font Warning: Font shape `TU/ptm/m/sl' undefined
-(Font)              using `TU/ptm/m/it' instead on input line 597.
+(Font)              using `TU/ptm/m/it' instead on input line 601.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -879,60 +861,45 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [6]
 
-LaTeX Warning: Reference `def:inj' on page 1 undefined on input line 632.
+Package natbib Warning: Citation `Samuel59' on page 7 undefined on input line 675.
 
 
-LaTeX Warning: Reference `lem:usefullemma' on page 1 undefined on input line 640.
+Package natbib Warning: Citation `Samuel59' on page 7 undefined on input line 677.
 
 
-LaTeX Warning: Reference `thm:bigtheorem' on page 1 undefined on input line 649.
+Package natbib Warning: Citation `kearns89' on page 7 undefined on input line 678.
 
 
-LaTeX Warning: Reference `ass:xfinite' on page 1 undefined on input line 658.
+Package natbib Warning: Citation `Samuel59' on page 7 undefined on input line 678.
 
 
-Package natbib Warning: Citation `Samuel59' on page 7 undefined on input line 671.
+Package natbib Warning: Citation `mitchell80' on page 7 undefined on input line 678.
 
 
-Package natbib Warning: Citation `Samuel59' on page 7 undefined on input line 673.
-
-
-Package natbib Warning: Citation `kearns89' on page 7 undefined on input line 674.
-
-
-Package natbib Warning: Citation `Samuel59' on page 7 undefined on input line 674.
-
-
-Package natbib Warning: Citation `mitchell80' on page 7 undefined on input line 674.
-
-
-Package natbib Warning: Citation `MachineLearningI' on page 7 undefined on input line 676.
+Package natbib Warning: Citation `MachineLearningI' on page 7 undefined on input line 680.
 
 
 
 
-LaTeX Warning: Reference `author info' on page 1 undefined on input line 680.
+Package natbib Warning: Citation `Samuel59' on page 7 undefined on input line 689.
 
 
-Package natbib Warning: Citation `Samuel59' on page 7 undefined on input line 685.
+Package natbib Warning: Citation `langley00' on page 7 undefined on input line 690.
 
 
-Package natbib Warning: Citation `langley00' on page 7 undefined on input line 686.
+Package natbib Warning: Citation `Newell81' on page 7 undefined on input line 690.
 
 
-Package natbib Warning: Citation `Newell81' on page 7 undefined on input line 686.
+Package natbib Warning: Citation `DudaHart2nd' on page 7 undefined on input line 691.
 
 
-Package natbib Warning: Citation `DudaHart2nd' on page 7 undefined on input line 687.
+Package natbib Warning: Citation `MachineLearningI' on page 7 undefined on input line 691.
 
 
-Package natbib Warning: Citation `MachineLearningI' on page 7 undefined on input line 687.
+Package natbib Warning: Citation `mitchell80' on page 7 undefined on input line 692.
 
 
-Package natbib Warning: Citation `mitchell80' on page 7 undefined on input line 688.
-
-
-Package natbib Warning: Citation `kearns89' on page 7 undefined on input line 688.
+Package natbib Warning: Citation `kearns89' on page 7 undefined on input line 692.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -940,12 +907,12 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 [7]
-Underfull \hbox (badness 1168) in paragraph at lines 745--749
+Underfull \hbox (badness 1168) in paragraph at lines 749--753
 \TU/ptm/m/sc/10 cases, but we encourage authors to think about
  []
 
 
-Package natbib Warning: Citation `langley00' undefined on input line 752.
+Package natbib Warning: Citation `langley00' undefined on input line 756.
 
 No file example_paper.bbl.
 
@@ -957,7 +924,7 @@ No file example_paper.bbl.
 ]
 
 LaTeX Font Warning: Font shape `TU/ptm/b/it' undefined
-(Font)              using `TU/ptm/b/n' instead on input line 765.
+(Font)              using `TU/ptm/b/n' instead on input line 769.
 
 
 Package natbib Warning: There were undefined citations.
@@ -976,25 +943,16 @@ L3 programming layer <2025-01-18>
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 
-LaTeX Warning: There were undefined references.
-
-
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-
-Package rerunfilecheck Warning: File `example_paper.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `example_paper.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
+Package rerunfilecheck Info: File `example_paper.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 25963 strings out of 473832
- 487529 string characters out of 5729481
- 902012 words of memory out of 5000000
- 48602 multiletter control sequences out of 15000+600000
+ 25973 strings out of 473832
+ 487716 string characters out of 5729481
+ 903012 words of memory out of 5000000
+ 48606 multiletter control sequences out of 15000+600000
  566631 words of font info for 74 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  99i,13n,101p,1006b,751s stack positions out of 10000i,1000n,20000p,200000b,200000s
