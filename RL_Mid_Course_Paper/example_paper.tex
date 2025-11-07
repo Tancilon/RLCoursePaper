@@ -372,23 +372,16 @@
         \end{tabular}}
     \end{table}
 
+    \subsection{Evaluation Protocol}
+    We report learning curves as the episodic return obtained from deterministic evaluation rollouts ($\epsilon = 0$) at fixed training intervals. At each interval, we execute an evaluation rollout with the current policy and record its episodic return; the curve is the sequence of these values over training. No smoothing is applied and all results are from a single random seed unless stated otherwise.
+
     \section{Results}
+    Figure~\ref{fig:learning_curves} shows the learning curve across both tasks. Under identical hyperparameters, our runs exhibit a consistent ranking $\text{DQN} < \text{Double-DQN} < \text{Dueling-DQN}$: DQN improves but displays noticeable oscillations and occasional regressions; Double-DQN dampens these fluctuations and is more sample-efficient; Dueling-DQN accelerates early learning and achieves the highest plateau with the most stable trajectory. The gap is most pronounced in the harder phases of training, where the variants sustain steadier progress toward convergence. For qualitative results (videos) from the optimized models for each algorithm and environment, please refer to the project repository: https://github.com/Hyrsta/Q-learning
+    
+    \section{Conclusion}
+    This study evaluated value-based deep reinforcement learning algorithms; DQN, Double-DQN, and Dueling-DQN on CartPole-v3 and LunarLander-v3 (discrete) under matched hyperparameters and a common training protocol. Across both tasks, the results consistently rank $\text{DQN} < \text{Double-DQN} < \text{Dueling-DQN}$ in terms of stability, sample efficiency, and attained return. These outcomes align with established explanations: Double-DQN mitigates overestimation bias, while the dueling architecture separates state value and advantage to improve value estimation efficiency. Using a unified setup (identical optimizers, Huber loss, and community-baseline hyperparameters) strengthens comparability and offers a clean empirical signal for the incremental benefits of these design choices.
 
-    \subsection{Learning Curves}
-    Figure~\ref{fig:learning_curves} shows the learning curve, i.e., the trajectory of performance (mean episodic return) as a function of training steps, which provides a direct visual check of whether the agent improves, slows down, or diverges.
-
-    Under identical settings, we typically observe the ordering $\text{DQN} < \text{Double-DQN} < \text{Dueling-DQN}$ in both sample efficiency and final return. This pattern is consistent with known mechanisms: Double-DQN reduces overestimation bias by decoupling action selection from evaluation, while Dueling separates state value and advantage to improve value estimation when actions are similar, yielding steadier updates, smoother curves, and faster convergence.
-
-    \paragraph{CartPole-v3.}
-    All methods eventually solve the task, but vanilla DQN exhibits more oscillation near the success threshold; Double-DQN attenuates these spikes, and Dueling-DQN reaches the optimal regime earlier with a flatter, more stable plateau.
-
-    \paragraph{LunarLander-v3 (discrete).}
-    The task is more challenging and exposes instabilities more clearly: DQN shows occasional regressions and slower ascent; Double-DQN substantially stabilizes the rise; Dueling-DQN converges fastest and attains the highest asymptote with the narrowest variability band.
-
-    \paragraph{Evaluation protocol.}
-    Curves are computed from mean episodic return on periodic evaluation rollouts (with exploration disabled) and displayed with smoothing and confidence bands across multiple random seeds; earlier and higher plateaus indicate better sample efficiency and stability.
-
-    \begin{figure}[t]
+    \begin{figure*}[th]
         \centering
         % Compiles even if the file doesn't exist; replace with your actual figure later.
         \IfFileExists{figures/learning_curves.png}{%
@@ -399,7 +392,7 @@
         }
         \caption{Learning curves on CartPole-v3 and LunarLander-v3 (discrete). Shaded regions indicate variability across random seeds.}
         \label{fig:learning_curves}
-    \end{figure}
+    \end{figure*}
 
 %     \subsection{Submitting Papers}
 
