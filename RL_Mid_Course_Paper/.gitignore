@@ -1,3 +1,23 @@
 build/
 .vscode/
 .idea/
+# LaTeX intermediate files
+*.aux
+*.log
+*.toc
+*.out
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.synctex
+*.nav
+*.snm
+*.bbl
+*.blg
+*.run.xml
+
+# temporary/editor files (optional)
+*~
+.*.swp
