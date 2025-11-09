@@ -445,10 +445,7 @@
         \end{tabular}}
     \end{table}
 
-    \subsection{Evaluation Protocol}
-    We report learning curves as the episodic return obtained from deterministic evaluation rollouts ($\epsilon = 0$) at fixed training intervals. At each interval, we execute an evaluation rollout with the current policy and record its episodic return; the curve is the sequence of these values over training. No smoothing is applied and all results are from a single random seed unless stated otherwise.
-
-    \begin{figure*}[th]
+    \begin{figure*}[ht]
         \centering
         % Compiles even if the file doesn't exist; replace with your actual figure later.
         \IfFileExists{figures/learning_curves.png}{%
@@ -460,6 +457,11 @@
         \caption{Learning curves on CartPole-v3 and LunarLander-v3 (discrete). Shaded regions indicate variability across random seeds.}
         \label{fig:learning_curves}
     \end{figure*}
+
+    \subsection{Evaluation Protocol}
+    We report learning curves as the episodic return obtained from deterministic evaluation rollouts ($\epsilon = 0$) at fixed training intervals. At each interval, we execute an evaluation rollout with the current policy and record its episodic return; the curve is the sequence of these values over training. No smoothing is applied and all results are from a single random seed unless stated otherwise.
+
+
 
 
     \section{Results}
