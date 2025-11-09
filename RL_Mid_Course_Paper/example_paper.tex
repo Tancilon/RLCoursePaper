@@ -166,6 +166,13 @@
 
     \subsection{Deep Q-Network with Experience Replay}
 
+    Q-learning is one of the earliest and most classical value-based methods in Reinforcement Learning (RL), 
+    originally proposed by Watkins and Dayan~\cite{watkins1992qlearning}. 
+    It enables an agent to learn an optimal policy through trial-and-error interactions with the environment 
+    without requiring prior knowledge of the environment’s transition probabilities. 
+    he algorithm is formulated under the framework of a Markov Decision Process (MDP), 
+    where decision-making scenarios are represented by states ($s$) and actions ($a$).
+
     The following pseudocode gives a concise implementation flow for a Deep Q-Network
     (DQN) using an experience replay buffer and a target network. It is written
     in the standard \texttt{algorithm} / \texttt{algorithmic} environments and
@@ -825,9 +832,8 @@
     % In the unusual situation where you want a paper to appear in the
     % references without citing it in the main text, use \nocite
     % \nocite{langley00}
-
-    \bibliography{example_paper}
     \bibliographystyle{icml2025}
+    \bibliography{example_paper}
 
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
