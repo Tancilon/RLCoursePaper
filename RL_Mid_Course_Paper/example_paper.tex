@@ -178,7 +178,7 @@
     This decoupling of action selection and target evaluation, combined with experience replay to break temporal correlations, 
     enables DQN to learn robust value functions even in complex, high-dimensional state spaces.
 
-    \subsection{Double Deep Q-Network (Double DQN)}
+    \subsection{Double Deep Q-Network}
 
     Double DQN~\cite{DBLP:journals/corr/HasseltGS15} reduces the overestimation bias of the original DQN by decoupling
     the action selection and action evaluation between the online network and
@@ -232,7 +232,7 @@
     particularly in environments where overestimation can lead to suboptimal policies or training instabilities.
 
 
-    \subsection{Dueling Deep Q-Network (Dueling DQN)}
+    \subsection{Dueling Deep Q-Network}
 
     Dueling DQN~\cite{DBLP:journals/corr/WangFL15} separates the representation of state-value and advantage for
     each action, which helps the agent learn which states are (or are not) valuable
