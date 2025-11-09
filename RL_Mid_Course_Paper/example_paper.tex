@@ -166,12 +166,31 @@
 
     \subsection{Deep Q-Network with Experience Replay}
 
-    Q-learning is one of the earliest and most classical value-based methods in Reinforcement Learning (RL), 
+    Q-learning is one of the earliest and most classical value-based methods in Reinforcement Learning, 
     originally proposed by Watkins and Dayan~\cite{watkins1992qlearning}. 
     It enables an agent to learn an optimal policy through trial-and-error interactions with the environment 
     without requiring prior knowledge of the environment’s transition probabilities. 
-    he algorithm is formulated under the framework of a Markov Decision Process (MDP), 
+    he algorithm is formulated under the framework of a Markov Decision Process, 
     where decision-making scenarios are represented by states ($s$) and actions ($a$).
+    Q-learning learns a state--action value function $Q(s, a)$, 
+    which represents the expected long-term cumulative reward obtained by taking action $a$ in state $s$. 
+    The learning process is governed by the \textbf{Bellman optimality equation}:
+    \[
+    Q(s, a) \leftarrow Q(s, a) + \alpha \left[ r + \gamma \max_{a'} Q(s', a') - Q(s, a) \right],
+    \]
+    where $\alpha$ is the learning rate, $\gamma$ is the discount factor, and $r$ denotes the immediate reward. 
+
+    The agent adopts an $\varepsilon$-greedy policy to balance \textit{exploration} (selecting random actions) 
+    and \textit{exploitation} (choosing actions with the highest estimated value). 
+    By iteratively updating the Q-values, the algorithm eventually converges to the optimal action--value function $Q^*(s, a)$. 
+    The corresponding optimal policy is defined as
+    \[
+    \pi^*(s) = \arg\max_a Q^*(s, a).
+    \]
+    Q-learning is an \textit{off-policy} algorithm, meaning that it learns the optimal policy 
+    while allowing the agent to explore the environment using any behavior policy.
+
+    
 
     The following pseudocode gives a concise implementation flow for a Deep Q-Network
     (DQN) using an experience replay buffer and a target network. It is written
