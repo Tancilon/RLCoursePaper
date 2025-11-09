@@ -238,7 +238,7 @@
     However, DQN still suffers from an \textit{overestimation bias}, 
     since the same network is used both to select and to evaluate actions. 
     This bootstrap update can amplify estimation errors, causing Q-values to be systematically overestimated. 
-    To address this issue, \textbf{van Hasselt et al. (2015)} proposed the \textit{Double DQN (DDQN)} algorithm, 
+    To address this issue, van Hasselt et al. (2015) proposed the \textit{Double DQN (DDQN)} algorithm, 
     which decouples \textit{action selection} from \textit{action evaluation} by using two networks. 
     The target value in Double DQN is computed as:
     \[
