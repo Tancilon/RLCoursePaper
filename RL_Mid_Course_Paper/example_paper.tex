@@ -164,6 +164,52 @@
     The algorithm is formulated under the framework of a Markov Decision Process (MDP)~\cite{sutton1998reinforcement}, 
     where decision-making scenarios are represented by states ($s$) and actions ($a$).
 
+    Q-learning learns a value function $Q(s, a)$ that represents the expected long-term cumulative reward 
+    obtained by taking action $a$ in state $s$. 
+    Its core learning rule follows the Bellman optimality equation:
+    \[
+    Q(s, a) \leftarrow Q(s, a) + \alpha \left[ r + \gamma \max_{a'} Q(s', a') - Q(s, a) \right],
+    \]
+    where $\alpha$ is the learning rate, $\gamma$ is the discount factor, and $r$ denotes the immediate reward. 
+    The agent employs an $\varepsilon$-greedy policy to balance \textit{exploration} and \textit{exploitation}. 
+    By iteratively updating the Q-values, the algorithm converges to the optimal action--value function $Q^*(s, a)$. 
+    The optimal policy is then given by:
+    \[
+    \pi^*(s) = \arg\max_a Q^*(s, a).
+    \]
+    Q-learning is an \textit{off-policy} algorithm, meaning that it can learn the optimal policy while exploring the environment 
+    with any behavior policy. 
+    However, Q-learning can only handle small-scale and discrete state spaces. 
+    It requires a Q-table to store the Q-values for all state–action pairs. 
+    When the state space becomes large or continuous, this table grows exponentially, 
+    making it impractical to store or update. 
+    Moreover, its poor generalization ability leads to inefficient learning, 
+    as similar states must be learned independently, resulting in instability and slow convergence. 
+    In complex environments, Q-value updates depend on massive samples, 
+    and highly correlated or noisy data may cause oscillation or even divergence in training.
+
+    To address these limitations, DeepMind proposed the \textit{Deep Q-Network (DQN)} in 2015, 
+    which approximates the Q-function with a neural network:
+    \[
+    Q(s, a; \theta) \approx Q^*(s, a),
+    \]
+    thereby eliminating the need for an explicit Q-table. 
+    Instead, the network directly outputs the Q-values for all possible actions given the input state $s$. 
+    The target value is still derived from the Bellman equation:
+    \[
+    y = r + \gamma \max_{a'} Q(s', a'; \theta^-),
+    \]
+    and the parameters are updated by minimizing the loss function:
+    \[
+    L(\theta) = \big(y - Q(s, a; \theta)\big)^2.
+    \]
+    DQN introduces two key mechanisms to stabilize learning. 
+    First, a target network with parameters $\theta^-$ is maintained as a delayed copy of the online network, 
+    preventing the target values from fluctuating as $\theta$ updates. 
+    Second, an experience replay buffer stores past transition tuples $(s, a, r, s')$, 
+    from which random batches are sampled during training. 
+    This breaks temporal correlations between samples, improves data efficiency, 
+    and enhances the overall stability of learning.
 
 
     Algorithm~\ref{alg:dqn_replay} summarizes the core training loop of DQN with experience replay. 
@@ -179,6 +225,30 @@
     enables DQN to learn robust value functions even in complex, high-dimensional state spaces.
 
     \subsection{Double Deep Q-Network}
+
+    Q-learning stores state–action values in a Q-table, which limits its applicability to small-scale and discrete environments. 
+    The Deep Q-Network (DQN) extends Q-learning by approximating the Q-function with a neural network, 
+    enabling reinforcement learning to operate in high-dimensional environments. 
+    The core update rule of DQN remains consistent with the Bellman equation:
+    \[
+    y = r + \gamma \max_{a'} Q(s', a'; \theta^-),
+    \]
+    where the target network with parameters $\theta^-$ improves the stability of training. 
+
+    However, DQN still suffers from an \textit{overestimation bias}, 
+    since the same network is used both to select and to evaluate actions. 
+    This bootstrap update can amplify estimation errors, causing Q-values to be systematically overestimated. 
+    To address this issue, \textbf{van Hasselt et al. (2015)} proposed the \textit{Double DQN (DDQN)} algorithm, 
+    which decouples \textit{action selection} from \textit{action evaluation} by using two networks. 
+    The target value in Double DQN is computed as:
+    \[
+    y = r + \gamma Q\big(s', \arg\max_{a'} Q(s', a'; \theta), \theta^-\big),
+    \]
+    where the online network with parameters $\theta$ is used to select the action 
+    and the target network with parameters $\theta^-$ is used to evaluate its value. 
+    This design effectively mitigates overestimation bias, leading to more stable training and more accurate value estimation. 
+    Consequently, Double DQN represents a robust improvement over the original DQN 
+    and has become a foundational component for many subsequent deep reinforcement learning algorithms.
 
     Double DQN~\cite{DBLP:journals/corr/HasseltGS15} reduces the overestimation bias of the original DQN by decoupling
     the action selection and action evaluation between the online network and
@@ -233,6 +303,31 @@
 
 
     \subsection{Dueling Deep Q-Network}
+
+    Although Double DQN effectively mitigates the overestimation of Q-values, 
+    its learning efficiency remains limited. 
+    In many states, the outcomes of different actions are nearly identical, 
+    making it computationally inefficient to update the Q-value for each action separately. 
+    To address this issue, DeepMind (2016) proposed the \textit{Dueling DQN} architecture, 
+    which improves learning efficiency and generalization capability. 
+    The key idea is to decompose the Q-value function into two separate components: 
+    the \textit{state value} $V(s)$ and the \textit{advantage function} $A(s, a)$. 
+    The overall Q-value is computed as:
+    \[
+    Q(s, a) = V(s) + \big(A(s, a) - \text{mean}(A)\big).
+    \]
+    In the Dueling architecture, the network shares a common feature-extraction layer 
+    that splits into two output streams: 
+    one for estimating the state value $V(s)$ and the other for the advantage values $A(s, a)$. 
+    When the effects of different actions are similar, 
+    the network can still learn the quality of a state through $V(s)$, 
+    thus updating more efficiently without evaluating every possible action. 
+    This enables the agent to focus on identifying important states even when action differences are subtle. 
+
+    Dueling DQN can be seamlessly combined with other mechanisms such as 
+    Double DQN and experience replay without altering the loss function. 
+    Therefore, it represents a structural enhancement to DQN, 
+    providing faster learning and improved generalization performance.
 
     Dueling DQN~\cite{DBLP:journals/corr/WangFL15} separates the representation of state-value and advantage for
     each action, which helps the agent learn which states are (or are not) valuable
