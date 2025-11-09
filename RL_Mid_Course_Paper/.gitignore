@@ -17,6 +17,7 @@ build/
 *.bbl
 *.blg
 *.run.xml
+*.pdf
 
 # temporary/editor files (optional)
 *~
